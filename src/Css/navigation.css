@@ -1,1 +1,76 @@
+.nav-bar__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
 
+.nav-bar__item {
+    min-width: 150px;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    line-height: 1.5rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.nav-bar__item--image {
+    background-image: url(https://ayp.vn/wp-content/uploads/2022/05/Vector.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #00616f !important;
+    font-family: arial, Sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.nav-bar__item--image:hover {
+    color: white !important;
+    cursor: pointer;
+}
+
+.title {
+    color: #00616f;
+    font-family: 'Satisfy', cursive;
+    font-size: 10rem;
+    font-weight: 400;
+    line-height: 15rem;
+    text-align: center;
+    font-style: italic;
+    animation: zoom-up 1s;
+}
+
+@keyframes zoom-up {
+    from {
+        font-size: 0rem;
+    }
+
+    to {
+        font-size: 10rem;
+    }
+}
+
+.slogan {
+    font-style: italic;
+    text-align: center;
+}
+
+.button--animation {
+    animation: zoom-button 1.5s ease infinite;
+}
+
+@keyframes zoom-button {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
