@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import "../Css/body.css"
 import { Grid, Title, Stack, Text, Image } from '@mantine/core';
 import Navigation from '../Component/navigation'
@@ -6,6 +6,28 @@ import Footer from '../Component/footer'
 
 
 export default function Body() {
+    useEffect(() => {
+        const observerCard1 = new IntersectionObserver((entries) => {
+            for (const entry of entries) { // Loop over all elements that either enter or exit the view.
+                if (entry.isIntersecting) { // This is true when the element is in view.
+                    entry.target.classList.add('who__condition-card--color1-animation'); // Add a class.
+                }
+            }
+        });
+        for (const item of document.querySelectorAll('.who__condition-card--color1')) {
+            observerCard1.observe(item);
+        }
+        const observerCard2 = new IntersectionObserver((entries) => {
+            for (const entry of entries) { // Loop over all elements that either enter or exit the view.
+                if (entry.isIntersecting) { // This is true when the element is in view.
+                    entry.target.classList.add('who__condition-card--color2-animation'); // Add a class.
+                }
+            }
+        });
+        for (const item of document.querySelectorAll('.who__condition-card--color2')) {
+            observerCard2.observe(item);
+        }
+    }, [])
     return (
         <Stack spacing="0" className="body">
             <Stack className="who">

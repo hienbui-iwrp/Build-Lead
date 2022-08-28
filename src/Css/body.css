@@ -80,6 +80,8 @@
     background-color: var(--background-card-color);
 }
 
+
+
 .who__condition-card--color1 span {
     background-image: url(https://ayp.vn/wp-content/uploads/2022/05/Vector-2.png);
     color: var(--text-secondary-color);
@@ -87,6 +89,22 @@
 
 .who__condition-card--color1 ul {
     color: var(--text-white-color);
+}
+
+.who__condition-card--color1-animation {
+    animation: card-goto-right ease 1.5s;
+}
+
+@keyframes card-goto-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .who__condition-card--color2 {
@@ -101,4 +119,20 @@
 
 .who__condition-card--color2 ul {
     color: var(--text-secodary-color);
+}
+
+.who__condition-card--color2-animation {
+    animation: card-goto-left ease 1.5s;
+}
+
+@keyframes card-goto-left {
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
