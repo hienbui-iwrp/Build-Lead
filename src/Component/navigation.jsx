@@ -28,14 +28,14 @@ export default function Navigation() {
     }, [])
 
     window.onscroll = () => {
-        var scrollTop = document.documentElement.scrollTop - 150;
-        var size = 10 - ((scrollTop > 0) ? scrollTop / 50 : 0);
+        var scrollTop = document.documentElement.scrollTop - 220;
+        var size = 10 - ((scrollTop > 0) ? scrollTop / 70 : 0);
         setTitleFont(size)
     }
 
 
     return <div className="navigation">
-        <Stack spacing="xl" justify="space-between" style={{ minHeight: 300 }}>
+        <Stack spacing="xl" justify="space-between" style={{ minHeight: 400 }}>
             <Grid>
                 <Grid.Col xs={6} sm={3} style={{
                     display: "flex",

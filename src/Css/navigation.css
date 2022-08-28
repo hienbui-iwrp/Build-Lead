@@ -6,16 +6,17 @@
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    align-items: space-between;
 }
 
 .nav-bar__item {
     min-width: 150px;
     text-align: center;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     line-height: 1.5rem;
     color: white;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
 }
 
