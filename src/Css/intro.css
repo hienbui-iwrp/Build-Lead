@@ -1,0 +1,84 @@
+.intro {
+    text-align: center;
+    margin: 0;
+}
+
+.intro__main {
+    padding-top: -2rem;
+    background-color: transparent;
+}
+
+.intro__text {
+    font-size: 2.3rem;
+    color: var(--text-white-color);
+    font-weight: 500;
+}
+
+.intro__text--background {
+    padding-top: 10rem;
+    background-image: linear-gradient(180deg, rgba(21, 46, 61, 0.01), rgba(21, 46, 61, 0.05), rgba(21, 46, 61, 0.1), rgba(21, 46, 61, 0.2), rgba(21, 46, 61, 0.3), rgba(21, 46, 61, 0.4), rgba(21, 46, 61, 0.5), rgba(21, 46, 61, 0.6), rgba(21, 46, 61, 0.7), rgba(21, 46, 61, 0.9), rgb(23, 47, 55), #0B1D26, #0B1D26, #0B1D26, #0B1D26, #0B1D26, #0B1D26);
+    /* box-shadow: 0 -3rem rgba(21, 46, 61, 0.05), 0 -6rem rgba(36, 15, 15, 0.05); */
+}
+
+.intro__text--italic {
+    color: var(--text-title-color);
+    font-style: italic;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.intro-more {
+    padding-top: 4rem;
+    background-color: var(--background-color);
+    color: white;
+}
+
+.intro-more__text {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.intro-more__list {
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    font-weight: 400;
+    padding: 0 7rem;
+}
+
+.intro-more__list li {
+    flex: 1;
+    padding: 0 1rem;
+    border-left: 1px solid #ddd;
+}
+
+.intro-more__list li:first-child {
+    border-left: none !important;
+}
+
+.intro-story {
+    background-color: #0B1D26;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.intro-story__bg {
+    background-image: url(https://ayp.vn/wp-content/uploads/2022/05/image-1-min.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 105rem;
+    padding: 10rem 13rem;
+}
+
+.intro-story__bg ul {
+    max-width: 88rem;
+    text-align: left;
+}
+
+.intro-story__bg b {
+    font-size: 2.2rem;
+    color: var(--text-secondary-color);
+}
