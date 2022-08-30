@@ -256,3 +256,64 @@
     font-size: 1.6rem;
     font-weight: 300;
 }
+
+.benefit {}
+
+.benefit-card1,
+.benefit-card2 {
+    background-color: white;
+    width: 95%;
+    margin: 0;
+    padding: 4%;
+    opacity: 0;
+}
+
+.benefit-card--animation1 {
+    opacity: 1;
+    animation: benefit-moveToRight ease 1.5s;
+}
+
+@keyframes benefit-moveToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50rem)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.benefit-card--animation2 {
+    opacity: 1;
+    animation: benefit-moveToLeft ease 1.5s;
+}
+
+@keyframes benefit-moveToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100rem)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.benefit-card__image {
+    padding: 0 4% 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-card__text {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-style: var(--font-text-thin);
+    font-size: 1.6rem;
+    font-weight: 200;
+    padding: 0;
+}

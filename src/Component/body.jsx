@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import "../Css/body.css"
-import { Grid, Title, Stack, Text, Image } from '@mantine/core';
+import { Grid, Title, Stack, Text, Image, Center } from '@mantine/core';
 import Navigation from '../Component/navigation'
 import Footer from '../Component/footer'
 
@@ -59,6 +59,31 @@ export default function Body() {
         for (const item of document.querySelectorAll('.founder__list')) {
             observerFounder3.observe(item);
         }
+
+        const observerBenefit1 = new IntersectionObserver((entries) => {
+            for (const entry of entries) { // Loop over all elements that either enter or exit the view.
+                if (entry.isIntersecting) { // This is true when the element is in view.
+                    entry.target.classList.add('benefit-card--animation1'); // Add a class.
+                }
+
+            }
+        });
+        for (const item of document.querySelectorAll('.benefit-card1')) {
+            observerBenefit1.observe(item);
+        }
+
+        const observerBenefit2 = new IntersectionObserver((entries) => {
+            for (const entry of entries) { // Loop over all elements that either enter or exit the view.
+                if (entry.isIntersecting) { // This is true when the element is in view.
+                    entry.target.classList.add('benefit-card--animation2'); // Add a class.
+                }
+
+            }
+        });
+        for (const item of document.querySelectorAll('.benefit-card2')) {
+            observerBenefit2.observe(item);
+        }
+
     }, [])
     return (
         <div className="body">
@@ -179,7 +204,125 @@ export default function Body() {
                     </Stack>
                     <span className="line-vertical"></span>
                 </Stack>
+                <Stack className="benefit">
+                    <Text className="intro__text">
+                        TẤT CẢ NHỮNG GÌ BẠN CẦN GÓI GỌN TRONG 8 TUẦN CÙNG HỌC PHƯƠNG PHÁP TỪ ANH TRÍ, THỰC CHIẾN NÚI RỪNG, REVIEW CÙNG TRỢ GIẢNG CHUYÊN NGHIỆP:
+                    </Text>
+                    <Grid>
+                        <Grid.Col md="12" lg="6">
+                            <Stack justify="space-between" spacing="xl">
+                                <Center>
+                                    <Grid className="benefit-card1">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Kiến thức toàn diện trong việc chạy bộ, trekking, dinh dưỡng, set up lều trại, sơ cấp cứu để chinh phục bất kì cuộc chơi
+                                                thể thao, du lịch trải nghiệm nào trong tương lai
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card1">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-1.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Tư duy để luôn giữ được sự kiên trì và niềm vui trong việc luyện tập thể thao
+                                                mà vẫn cân bằng với đời sống công việc, gia đình
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card1">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-2.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Thử thách giới hạn bản thân, có đội ngũ huấn luyện viên đánh giá sức khoẻ,
+                                                sức bền của bạn
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card1">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-3.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Trải nghiệm hình thức Back-yard tại Đà Lạt và những địa điểm với cảnh quan ngoạn mục tại Việt Nam:
+                                                Sapa, Mộc Châu, Pù Luông,… để chạm đến giới hạn của bản thân
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                            </Stack>
+                        </Grid.Col>
+                        <Grid.Col md="12" lg="6">
+                            <Stack justify="space-between" spacing="xl">
+                                <Center>
+                                    <Grid className="benefit-card2">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-4.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Kỹ năng tự lên quy trình tập luyện dựa trên thể lực của bản thân
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card2">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-5.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Kiến thức để lên thực đơn theo nhiều loại hình dinh dưỡng cho chính mình
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card2">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-6.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Kỹ năng phối hợp đội nhóm hiệu quả, được thi đấu thực chiến trong suốt khoá học
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                                <Center>
+                                    <Grid className="benefit-card2">
+                                        <Grid.Col className="benefit-card__image" span={2}>
+                                            <Image src="https://ayp.vn/wp-content/uploads/2022/05/Rectangle-74-7.png" />
+                                        </Grid.Col>
+                                        <Grid.Col span={10} className="benefit-card__text">
+                                            <Text>
+                                                Gia nhập cộng động năng động AYP Adventure đồng hành xuyên suốt trong và sau khóa học
+                                            </Text>
+                                        </Grid.Col>
+                                    </Grid>
+                                </Center>
+                            </Stack>
+                        </Grid.Col>
+                    </Grid>
+                    <span className="line-vertical"></span>
+                </Stack>
+                <Stack className="experience">
 
+                </Stack>
             </Stack>
         </div>
     );
