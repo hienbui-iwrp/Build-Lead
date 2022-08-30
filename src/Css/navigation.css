@@ -38,7 +38,7 @@
 
 .title {
     color: #00616f;
-    font-family: 'Satisfy', cursive;
+    font-family: var(--font-title-core);
     font-size: 10rem;
     font-weight: 400;
     line-height: 15rem;

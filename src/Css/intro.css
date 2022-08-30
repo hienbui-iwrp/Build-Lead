@@ -27,6 +27,21 @@
     font-weight: 600;
 }
 
+.intro__text--animation {
+    animation: zoom-out ease 2s;
+}
+
+
+@keyframes zoom-out {
+    from {
+        transform: scale(0, 0)
+    }
+
+    to {
+        transform: scale(1, 1)
+    }
+}
+
 .intro-more {
     padding-top: 4rem;
     background-color: var(--background-color);
@@ -40,20 +55,25 @@
 
 .intro-more__list {
     font-size: 1.5rem;
-    list-style: none;
-    display: flex;
     font-weight: 400;
     padding: 0 7rem;
 }
 
-.intro-more__list li {
-    flex: 1;
+.intro-more__child {
     padding: 0 1rem;
     border-left: 1px solid #ddd;
 }
 
-.intro-more__list li:first-child {
-    border-left: none !important;
+.intro-more__child--frist {
+    border: none !important;
+}
+
+@media screen and (max-width:770px) {
+    .intro-more__child {
+        padding: 2rem 0;
+        border-top: 1px solid #ddd;
+        border-left: none;
+    }
 }
 
 .intro-story {
@@ -62,6 +82,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
+    font-size: 1.5rem;
 }
 
 .intro-story__bg {
@@ -70,7 +91,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 105rem;
-    padding: 10rem 13rem;
+    padding: 10rem 10%;
+}
+
+@media screen and (max-width:65rem) {
+    .intro-story__bg {
+        padding: 10rem 0;
+
+    }
 }
 
 .intro-story__bg ul {
